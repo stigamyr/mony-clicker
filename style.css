@@ -1,0 +1,50 @@
+.body{
+width: 100%;
+height: 100%;
+}
+
+
+
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+
+  .point{
+
+    top: 60%;
+    left: 60%;
+  }
+
+
+.all{
+  position: absolute;
+  top: 20%;
+  right: 16px;
+  font-size: 18px;
+  width: 200x;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 20px;
+  background-color: red;
+}
+
+  .picture {
+  flex-direction: row;
+  
+  }
+  .news{
+    flex direction:row;
+  }
+
+  .money{
+    width: 200x;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    background-color: red;
+  }
+ 
