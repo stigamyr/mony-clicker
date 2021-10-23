@@ -1,5 +1,5 @@
 var dollars = 0;
-
+var lemo= 100
 var intervaldId = window.setInterval(function(){
     // all kode her kjøres 10 ganger i sekundet
     document.getElementById("dollar_earnd").innerHTML=dollars;

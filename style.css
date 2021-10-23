@@ -22,18 +22,19 @@ height: 100%;
 
 .all{
   position: absolute;
-  top: 20%;
-  right: 16px;
-  font-size: 18px;
-  width: 200x;
+  top: 22%;
+  right: 20px;
+  width: 100x;
   border: 15px solid black;
-  padding: 50px;
+  padding: 60px;
   margin: 20px;
   background-color: red;
+  border-image-width: 10%;
 }
 
   .picture {
-  flex-direction: row;
+  
+}
   
   }
   .news{
