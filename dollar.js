@@ -1,5 +1,5 @@
 var dollars = 0;
-var lemo= 100
+var lemo = 100
 var intervaldId = window.setInterval(function(){
     // all kode her kjøres 10 ganger i sekundet
     document.getElementById("dollar_earnd").innerHTML=dollars;
@@ -13,7 +13,7 @@ console.log(dollars);
  
 function click_lemon(){
     
-    dollars+=20;
+    dollars >= lemon
     console.log(dollars);
 }
 function click_news(){
