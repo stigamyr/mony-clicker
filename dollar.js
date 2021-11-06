@@ -4,6 +4,7 @@ var pizza = 0;
 var avis  = 0;
 var lemon_price = 10;
 var avis_price = 10;
+var bitcoin = 0;
 
 
 
