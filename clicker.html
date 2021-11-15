@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope itemtype="http://schema.org/Article">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="21471708765-upgqsq2pfeocur1gckpbtadtdkqvi932.apps.googleusercontent.com">
 
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="inpakkning" >
 
 
         <div class="btn-contain">
-    
+          
             <div class="header">  dollar earnd : <h1 id="dollar_earnd"></h1><br>
             
 
              
 
-            <div class="btc" > 
-                <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin">btc:</h1>
-            </div>
+         
             <hr>
 
 
@@ -29,19 +29,36 @@
       
       <div class="dolards"><button onclick = "click_dollar()" class="thedol"><img src="money.png" alt="" style="width:300px" >click</button>
     
+
+
+        
     <hr>
-    
+    <div class="btc" > 
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+        <img src="bitcoin.png" alt=""  id="bitcoinm" style="width:150px"  title=""> <h1 id="bitcoin"></h1>
+
+        
+    </div>
         <div class="all"> 
        
             <button onclick = "buy_lemon()"><img src="lemonade.png" alt=""><p id="dolar_text" ></p></button>
-            
+
             
             <button onclick="buy_avis()"><img src="news.png" alt="" style="width:150px" > <h1 id="avis_price" ></h1></button>
             <button onclick="click_pizza()" ><img src="pizza.png" alt="" style="width:150px" ></button>
-        <button onclick="buy_mall()"><img src="mall.png" alt=""></button>
-        
+            <button onclick="buy_mall()"><img src="mall.png" alt="" style="width: 150px;"></button>
+
     </div>
        
+
+
+    
     </div>
       
 
@@ -66,6 +83,21 @@
 <script src="dollar.js"></script>
 
 
-<meta name="google-signin-client_id" content="21471708765-upgqsq2pfeocur1gckpbtadtdkqvi932.apps.googleusercontent.com">
+
+   <!--firebase-->
+   <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+   <!--bootsrap-->
+   <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
 
 </html>

@@ -5,8 +5,9 @@ var avis  = 0;
 var lemon_price = 10;
 var avis_price = 10;
 var bitcoin = 0;
-
-
+var divEL = document.querySelector("button")
+var rotasjon = 0
+var fart = 1
 
 document.getElementById("avis_price").innerHTML =  avis_price + "$";
 
@@ -30,6 +31,7 @@ var intervaldId = window.setInterval(function(){
 
 
 
+
 function add_lemon() {
     
      
@@ -42,6 +44,16 @@ function add_lemon() {
 
 function click_dollar(){
 dollars++;
+
+
+function animer(){
+    rotasjon += fart
+
+divEL.style.transform="rotate("+ rotasjon+"deg)";
+requestAnimationFrame(animer);
+}
+animer();
+
 
 }
  
@@ -79,14 +91,7 @@ function buy_avis(){
 
 
 
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
 
-
-
+ 
+ 
 
