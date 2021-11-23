@@ -8,8 +8,10 @@ var bitcoin = 0;
 var divEL = document.querySelector("button")
 var rotasjon = 0
 var fart = 1
+var bitcoin_price = 500
 
-document.getElementById("avis_price").innerHTML =  avis_price + "$";
+var html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
+
 
 
 var intervaldId = window.setInterval(function(){
@@ -26,11 +28,30 @@ var intervaldId = window.setInterval(function(){
     add_lemon();
     add_pizza();
     add_news();
+    add_coin();
 }, 1000);
 
 
 
+function add_coin(){
+    
+    dollars += 1* bitcoin
+}
 
+
+
+
+function buy_bitcoin(){
+
+    if(dollars >= bitcoin_price ){
+        bitcoin += 100;
+        dollars -= lemon_price;
+        bitcoin_price *= 5,5;
+        document.getElementById("html_coin").innerHTML+=html_coin;
+
+    }
+
+}
 
 function add_lemon() {
     
@@ -76,7 +97,7 @@ function add_news(){
 function buy_avis(){
 
     if(dollars >= avis_price){
-        avis += 1;
+        avis += 5;
         dollars -= avis_price;
         avis_price *= 10.10;
         document.getElementById("avis_price").innerHTML =  avis_price + "$";
@@ -90,8 +111,5 @@ function buy_avis(){
   }
 
 
-
-
- 
  
 
