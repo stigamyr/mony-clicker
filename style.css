@@ -68,7 +68,7 @@ justify-content: end;
 
 }
 
-.btc{
+.bitcoin{
 display: flex;
 flex-direction: row row-reverse;
 justify-content: center;

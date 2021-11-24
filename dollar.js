@@ -3,12 +3,12 @@ var lemo = 0;
 var pizza = 0;
 var avis  = 0;
 var lemon_price = 10;
-var avis_price = 10;
+var avis_price = 10; 
 var bitcoin = 0;
 var divEL = document.querySelector("button")
-var rotasjon = 0
+var rotasjon = 
 var fart = 1
-var bitcoin_price = 500
+var bitcoin_price = 250
 
 var html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
 
@@ -32,6 +32,7 @@ var intervaldId = window.setInterval(function(){
 }, 1000);
 
 
+// leher till dollars til he taggen ver gang du klikker på dollar
 
 function add_coin(){
     
@@ -45,10 +46,11 @@ function buy_bitcoin(){
 
     if(dollars >= bitcoin_price ){
         bitcoin += 100;
-        dollars -= lemon_price;
+        dollars -= bitcoin_price;
         bitcoin_price *= 5,5;
-        document.getElementById("html_coin").innerHTML+=html_coin;
-
+        document.getElementById("bitcoin_price").innerHTML = bitcoin_price + "$";
+        document.getElementById("con").innerHTML += html_coin;
+     
     }
 
 }
@@ -68,10 +70,15 @@ dollars++;
 
 
 function animer(){
-    rotasjon += fart
 
+   rotasjon += fart
+       
+   
 divEL.style.transform="rotate("+ rotasjon+"deg)";
 requestAnimationFrame(animer);
+if(rotasjon = 360){
+    rotasjon = true;
+}
 }
 animer();
 
