@@ -6,10 +6,10 @@ var lemon_price = 10;
 var avis_price = 10; 
 var bitcoin = 0;
 var divEL = document.querySelector("button")
-var rotasjon = 
-var fart = 1
+var rotasjon = 0;
+var fart = 10;
 var bitcoin_price = 250
-
+var fps = 5;
 var html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
 
 
@@ -31,6 +31,39 @@ var intervaldId = window.setInterval(function(){
     add_coin();
 }, 1000);
 
+
+
+
+
+
+window.onload = function load() {
+    if(parseInt(localStorage.getItem("saved")) === version){
+    if(localStorage.getItem("saved") !== null){
+     
+     if(localStorage["saved"] !== undefined){
+     
+         if(typeof(localStorage.getItem("saved")) === "string"){
+         dollars = parseInt(localStorage.getItem("dollars"));
+        lemo = parseInt(localStorage.getItem)
+        avis = parseInt(localStorage.getItem)
+         bitcoin = parseInt(localStorage.getItem)
+        console.log("Loaded!");
+ }
+  }
+  }
+  }
+  }
+
+  var bb = setInterval(save,10000);
+  function save() {
+      localStorage.setItem("saved", version);
+      localStorage.setItem("dollars", dollars);
+      localStorage.setItem("bitcoin", bitcoin);
+   ;
+  
+      console.log("Saved");
+  
+  }
 
 // leher till dollars til he taggen ver gang du klikker på dollar
 
@@ -66,24 +99,32 @@ function add_lemon() {
 
 
 function click_dollar(){
-dollars++;
+    dollars++;
 
 
-function animer(){
+        function animer(){
 
-   rotasjon += fart
+        rotasjon += fart
+
+        divEL.style.transform="rotate("+ rotasjon+"deg)";
+            
        
-   
-divEL.style.transform="rotate("+ rotasjon+"deg)";
-requestAnimationFrame(animer);
-if(rotasjon = 360){
-    rotasjon = true;
-}
-}
-animer();
+            setTimeout(function() {
+                requestAnimationFrame(animer);
+           }, 100/fps);
+        
+        
+            
+            
+
+        }
+        
+        
+        animer();
 
 
 }
+
  
 
 
@@ -119,4 +160,6 @@ function buy_avis(){
 
 
  
-
+setInterval(() => {
+    
+}, interval);
