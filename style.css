@@ -6,7 +6,7 @@
 
 
 
-div {
+div{
   border: solid black 1px;
 }
 
@@ -84,6 +84,10 @@ button {
   outline: none;
 }
 
+
+.reset{
+  background-color: burlywood;
+}
 
 
 ;

@@ -3,7 +3,7 @@ var lemo = 0;
 var pizza = 0;
 var avis  = 0;
 var lemon_price = 10;
-var avis_price = 10; 
+var avis_price = 50; 
 var bitcoin = 0;
 var divEL = document.querySelector("button")
 var rotasjon = 0;
@@ -11,9 +11,8 @@ var fart = 10;
 var bitcoin_price = 250
 var fps = 5;
 var html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
-var version = 9
-
-
+var version = 42
+var pizza_price = 1000;
 var intervaldId = window.setInterval(function(){
     // all kode her kjøres 10 ganger i sekundet
     document.getElementById("dollar_earnd").innerHTML=dollars;
@@ -33,67 +32,31 @@ var intervaldId = window.setInterval(function(){
 
 
 
-
-
-
-window.onload = function load() {
-    if(parseInt(localStorage.getItem("saved")) === version){
-    if(localStorage.getItem("saved") !== null){
-     
-     if(localStorage["saved"] !== undefined){
-     
-         if(typeof(localStorage.getItem("saved")) === "string"){
-         dollars = parseInt(localStorage.getItem("click_dollars"));
-        lemo = parseInt(localStorage.getItem("buy_lemon"));
-        avis = parseInt(localStorage.getItem("buy_avis"));
-         bitcoin = parseInt(localStorage.getItem("buy_bitcoin"));
-         html_coin = parseInt(localStorage.getItem("html_coin"));
-        console.log("Loaded!");
- }
-  }
-  }
-  }
-  }
-
-  var ba = setInterval(save,10000);
-  function save() {
-      localStorage.setItem("saved", version);
-      localStorage.setItem("click_dollars", dollars);
-      localStorage.setItem("buy_bitcoin", bitcoin);
-      localStorage.setItem("buy_avis", avis);
-      localStorage.setItem("html_coin",html_coin);
-   ;
-  
-      console.log("Saved");
-  
-  }
-
-
-  function reset() {
-     dollars = 0;
-     lemo = 0;
-     pizza = 0;
-     avis  = 0;
-     lemon_price = 10;
-     avis_price = 10; 
-     bitcoin = 0;
-     divEL = document.querySelector("button")
-     rotasjon = 0;
-     fart = 10;
-     bitcoin_price = 250
-     fps = 5;
-     html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
-     version = 1
+ window.onload = function load() {
+   if(parseInt(localStorage.getItem("saved")) === version){
+   if(localStorage.getItem("saved") !== null){
     
-    localStorage.setItem("saved", version);
-    localStorage.setItem("saved", version);
-    localStorage.setItem("click_dollars", dollars);
-    localStorage.setItem("buy_bitcoin", bitcoin);
-    localStorage.setItem("buy_avis", avis);
-    localStorage.setItem("html_coin",html_coin);
-    window.location.reload();
+    if(localStorage["saved"] !== undefined){
+    
+        if(typeof(localStorage.getItem("saved")) === "string"){
+      dollars = parseInt(localStorage.getItem("dollars"));
+      avis_price = parseInt(localStorage.getItem("avis_price"))
+       console.log("Loaded!");
 }
-// leher till dollars til he taggen ver gang du klikker på dollar
+ }
+ }
+ }
+ }
+
+
+var ba = setInterval(save,10000);
+function save() {
+    localStorage.setItem("saved", version);
+   localStorage.setItem("dollars",dollars);
+    localStorage.setItem("avis_price",avis_price)
+    console.log("Saved");
+}
+// leger till dollars til he1 taggen ver gang du klikker på dollar og lagere det i variablene dollars
 
 function add_coin(){
     
@@ -109,8 +72,7 @@ function buy_bitcoin(){
         bitcoin += 100;
         dollars -= bitcoin_price;
         bitcoin_price *= 5,5;
-        
-     
+        document.getElementById("con").innerHTML += html_coin     
     }
 
 }
@@ -126,7 +88,7 @@ function add_lemon() {
 
 
 function click_dollar(){
-    dollars++;
+    dollars+= 1;
 
 
         function animer(){
@@ -174,11 +136,19 @@ function buy_avis(){
     if(dollars >= avis_price){
         avis += 5;
         dollars -= avis_price;
-        avis_price *= 10.10;
-        document.getElementById("avis_price").innerHTML =  avis_price + "$";
+        avis_price *= 1.1;
+        
     }
 }
 
+
+function buy_pizza(){
+    if(dollars >= pizza_price){
+        pizza += 5
+        dollarsm -= pizza_price
+        avis_price *= 3,3
+    }
+}
 
 
   function add_pizza(){
@@ -186,11 +156,13 @@ function buy_avis(){
   }
 
 
- 
-setInterval(function (){+
-document.getElementById("emon_price").innerHTML = math.floor(lemon_price);
-document.getElementById("bitcoin_price").innerHTML = Math.floor(bitcoin_price);
-document.getElementById("")
 
-    
+
+ 
+setInterval(function(){
+document.getElementById("emon_price").innerHTML  = Math.floor(lemon_price);
+document.getElementById("bit_price").innerHTML = Math.floor(bitcoin_price);
+document.getElementById("av_price").innerHTML = Math.floor(avis_price);
+document.getElementById("piz").innerHTML = Math.floor(pizza_price);
+
 }, 10);
