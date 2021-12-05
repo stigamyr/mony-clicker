@@ -11,8 +11,10 @@ var fart = 10;
 var bitcoin_price = 250
 var fps = 5;
 var html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
-var version = 42
-var pizza_price = 1000;
+var version = 59
+var pizza_price = 900;
+var tesla = 0
+var tesla_price = 5000
 var intervaldId = window.setInterval(function(){
     // all kode her kjøres 10 ganger i sekundet
     document.getElementById("dollar_earnd").innerHTML=dollars;
@@ -28,7 +30,10 @@ var intervaldId = window.setInterval(function(){
     add_pizza();
     add_news();
     add_coin();
+    add_tesla();
 }, 1000);
+
+
 
 
 
@@ -40,7 +45,16 @@ var intervaldId = window.setInterval(function(){
     
         if(typeof(localStorage.getItem("saved")) === "string"){
       dollars = parseInt(localStorage.getItem("dollars"));
-      avis_price = parseInt(localStorage.getItem("avis_price"))
+      avis_price = parseInt(localStorage.getItem("avis_price"));
+      lemo = parseInt(localStorage.getItem("lemo"));
+      bitcoin = parseInt(localStorage.getItem("bitcoin"));
+      html_coin = parseInt(localStorage.getItem("html_coin"));
+      bitcoin_price = parseInt(localStorage.getItem("bitcoin_price"));
+      lemon_price = parseInt(localStorage.getItem("lemon_price"));
+      pizza = parseInt(localStorage.getItem("pizza"));
+      pizza_price = parseInt(localStorage.getItem("pizza_price"));
+      tesla_price = parseInt(localStorage.getItem("tesal_price"));
+      tesla = parseInt(localStorage.getItem("tesla"));
        console.log("Loaded!");
 }
  }
@@ -49,13 +63,61 @@ var intervaldId = window.setInterval(function(){
  }
 
 
-var ba = setInterval(save,10000);
+var ba = setInterval(save,100);
 function save() {
     localStorage.setItem("saved", version);
    localStorage.setItem("dollars",dollars);
     localStorage.setItem("avis_price",avis_price)
+    localStorage.setItem("lemo",lemo);
+    localStorage.setItem("bitcoin",bitcoin);
+    localStorage.setItem("html_coin",html_coin.innerHTMLL);
+    localStorage.setItem("bitcoin_price",bitcoin_price);
+    localStorage.setItem("lemon_price",lemon_price);
+    localStorage.setItem("pizza",pizza);
+    localStorage.setItem("pizza_price",pizza_price);
+    localStorage.setItem("tesla_price",tesla_price);
+    localStorage.setItem("tesla",tesla);
+
     console.log("Saved");
+
+
+  
 }
+
+function reset() {
+
+    var dollars = 0;
+ lemo = 0;
+ pizza = 0;
+ avis  = 0;
+ lemon_price = 10;
+ avis_price = 50; 
+ bitcoin = 0;
+ divEL = document.querySelector("button")
+ rotasjon = 0;
+ fart = 10;
+ bitcoin_price = 250
+ fps = 5;
+ html_coin = "<div class='btc' id= 'con'> <img src='bitcoin.png' alt=''  id='bitcoinm' style='width:150px'  title=''></div>";
+ pizza_price = 900;
+tesla_price = 500
+tesla = 0 
+    localStorage.setItem("saved", version);
+    localStorage.setItem("dollars",dollars);
+    localStorage.setItem("avis_price",avis_price)
+    localStorage.setItem("lemo",lemo);
+    localStorage.setItem("bitcoin",bitcoin);
+    localStorage.setItem("html_coin",html_coin.outerHTML);
+    localStorage.setItem("bitcoin_price",bitcoin_price);
+    localStorage.setItem("lemon_price",lemon_price);
+    localStorage.setItem("pizza",pizza);
+    localStorage.setItem("pizza_price",pizza_price);
+    localStorage.setItem("tesla_price",tesla_price);
+    localStorage.setItem("tesla",tesla);
+  
+
+}
+localStorage.clear();
 // leger till dollars til he1 taggen ver gang du klikker på dollar og lagere det i variablene dollars
 
 function add_coin(){
@@ -63,8 +125,17 @@ function add_coin(){
     dollars += 1* bitcoin
 }
 
+function add_tesla(){
+    dollars += 1* tesla
+}
 
+function buy_tesla(){
+    if(dollars >= tesla_price){
+        tesla += 500;
+        dollars -= tesla_price;
 
+    }
+}
 
 function buy_bitcoin(){
 
@@ -144,9 +215,9 @@ function buy_avis(){
 
 function buy_pizza(){
     if(dollars >= pizza_price){
-        pizza += 5
-        dollarsm -= pizza_price
-        avis_price *= 3,3
+        pizza += 5;
+        dollars -= pizza_price;
+        pizza_price *= 1,1
     }
 }
 
@@ -156,13 +227,18 @@ function buy_pizza(){
   }
 
 
-
-
+  window.onbeforeunload = confirmExit;
+  function confirmExit(){
+      
+      alert("confirm exit is being called");
+      return false;
+  }
  
 setInterval(function(){
 document.getElementById("emon_price").innerHTML  = Math.floor(lemon_price);
 document.getElementById("bit_price").innerHTML = Math.floor(bitcoin_price);
 document.getElementById("av_price").innerHTML = Math.floor(avis_price);
 document.getElementById("piz").innerHTML = Math.floor(pizza_price);
+document.getElementById("tes").innerHTML = Math.floor(tesla_price)
 
 }, 10);

@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Article">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0063)file:///C:/Users/stiga/Desktop/GitHub/mony-clicker/clicker.html -->
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="21471708765-upgqsq2pfeocur1gckpbtadtdkqvi932.apps.googleusercontent.com">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./clicker_files/style.css">
     
 
 
     
 </head>
 <body>
-    <div class="inpakkning" >
+    <div class="inpakkning">
 
 
         <div class="btn-contain">
      
 
-            <div class="header">  dollar earnd : <h1 id="dollar_earnd"></h1><br>
+            <div class="header">  dollar earnd : <h1 id="dollar_earnd">0</h1><br>
          
 
              
@@ -32,33 +31,33 @@
 
 
             <div class="reset">
-                <button onclick="reset()">hei</button>
+                <button onclick="reset()">restart</button>
 
 
             </div>
       
-      <div class="dolards"><button onclick = "click_dollar()" class="thedol"><img src="money.png" alt="" style="width:300px" >click</button>
+      <div class="dolards"><button onclick="click_dollar()" class="thedol" id="spin"><img src="./clicker_files/money.png" alt="" style="width:300px">click</button>
     
 
 
         
     <hr>
-    <div class="btc_container" id="con"> 
+    <div class="btc_container" id="cons"> 
       
-        <div class='btc' id= 'con'> <img src='' alt=''  id='bitcoinm' style='width:150px'  title=''></div>;
+        <div class="btc" id="con"> <img src="clicker.html" alt="" id="bitcoinm" style="width:150px" title=""></div>;
     </div>
         <div class="all"> 
        
-            <button onclick = "buy_lemon()"><img src="lemonade.png" alt=""><h1 id="emon_price"></h1></button>
+            <button onclick="buy_lemon()"><img src="lemonade.png" alt=""><h1 id="emon_price">10</h1></button>
            
-            
-            
-            <button onclick="buy_avis()"><img src="news.png" alt="" style="width:150px" > <h1 id="av_price" ></h1></button>
-            <button onclick="buy_bitcoin()"> <img src="bitcoin.png" alt=""  id="bitcoin_price" style="width:150px"  title="">   <h1 id="bit_price"></h1></button>            
 
-            <button onclick="buy_pizza()" ><img src="pizza.png" alt="" style="width:150px" ></button> <h1 id="piz"></h1>
-            <button onclick="buy_mall()"><img src="mall.png" alt="" style="width: 150px;"></button>
+            
+            <button onclick="buy_avis()"><img src="news.png" alt="" style="width:150px"> <h1 id="av_price">50</h1></button>
+            <button onclick="buy_bitcoin()"> <img src="bitcoin.png" alt="" id="bitcoin_price" style="width:150px" title="">   <h1 id="bit_price">250</h1></button>            
 
+            <button onclick="buy_pizza()"><img src="pizza.png" alt="" style="width:150px"></button> <h1 id="piz">900</h1>
+            
+            <button onclick="buy_tesla()"><img src="tes.png" alt="" style="width: 150px;"> <h1 id="tes">5000</h1></button>
     </div>
        
 
@@ -79,13 +78,13 @@
 
 
     
-    </div>
-
-</body>
+    
 
 
 
-<script src="dollar.js"></script>
+
+
+<script src="dollars.js"></script>
 
 
 
@@ -95,4 +94,4 @@
 
 
 
-</html>
+</body></html>
